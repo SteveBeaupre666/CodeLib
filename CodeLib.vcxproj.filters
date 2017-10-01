@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{f8d1b70c-2b08-4789-b90a-167863451754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File IO">
+      <UniqueIdentifier>{7dc631ed-2748-4bec-91b2-535ff3ad9233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{f8edd70f-43dc-4ded-b8f6-ad18725c6d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{7d35242e-d682-4bf7-946a-19c4fbe9d5b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Disk IO">
+      <UniqueIdentifier>{5405f7b1-ec93-419b-8c4a-415201691f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{975c1e54-de1c-4d23-94fd-fc91f774b6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Registry">
+      <UniqueIdentifier>{062d711d-1857-4747-8d1a-45342c9d5b38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{dd30d0e3-43dc-4618-8924-2c3f9cfa9aa1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeLib.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\File IO\TxtFile.cpp">
+      <Filter>File IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\ArrayTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\BufferTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\GenericTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\LinkedListTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\TxtFileTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Memory\Buffer.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\Array2DTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\File IO\FileIO.cpp">
+      <Filter>File IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\FileIOTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\File IO\DiskIO.cpp">
+      <Filter>Disk IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tests\TreeTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Memory\TextBuffer.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Registry\Registry.cpp">
+      <Filter>Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Windows\FileSystem.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CodeLib.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\Array.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\Array2D.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\LinkedList.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\File IO\TxtFile.h">
+      <Filter>File IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\ArrayTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\BufferTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\GenericTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\LinkedListTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\TxtFileTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Buffer.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\SafeKill.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\Exceptions.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\Assertion.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\Array2DTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\File IO\FileIO.h">
+      <Filter>File IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\FileIOTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\File IO\DiskIO.h">
+      <Filter>Disk IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\Tree.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Tests\TreeTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\TextBuffer.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Registry\Registry.h">
+      <Filter>Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Windows\FileSystem.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

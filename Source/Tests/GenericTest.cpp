@@ -1,0 +1,101 @@
+#include "GenericTest.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+GenericTest::GenericTest()
+{
+	ResetTestsResults();
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::OnTestFailed(char *pTestName)
+{
+	NumTestsDone++;
+	NumTestsFailed++;
+	OnFailure(pTestName);
+}
+
+void GenericTest::OnTestPassed(char *pTestName)
+{
+	NumTestsDone++;
+	NumTestsPassed++;
+	OnSuccess(pTestName);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::OnFailure(char *pTestName)
+{
+	printf("  Test #%2.2d FAILED --> %s\n", NumTestsDone, pTestName);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::OnSuccess(char *pTestName)
+{
+	printf("  Test #%2.2d PASSED --> %s\n", NumTestsDone, pTestName);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+int GenericTest::GetNumTestsDone()
+{
+	return NumTestsDone;
+}
+
+int GenericTest::GetNumTestsFailed()
+{
+	return NumTestsFailed;
+}
+
+int GenericTest::GetNumTestsPassed()
+{
+	return NumTestsPassed;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::PrintTestName(char* name)
+{
+	printf("Starting %s Tests...\n", name);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::PrintTestsResults()
+{
+	printf("\n  %d/%d tests passed.\n\n", NumTestsPassed, NumTestsDone);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::ResetTestsResults()
+{
+	NumTestsDone   = 0;
+	NumTestsFailed = 0;
+	NumTestsPassed = 0;
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+
+void GenericTest::RunTest(void *pTestFunc, char *pTestName)
+{
+	SetUp();
+
+	PFN_TEST Test = (PFN_TEST)pTestFunc;
+	
+	try {
+		Test();
+		OnTestPassed(pTestName);
+		TearDown();
+	} catch(...){
+		OnTestFailed(pTestName);
+		TearDown();
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+

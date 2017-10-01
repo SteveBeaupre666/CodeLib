@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F345F0CA-AC2F-4687-B94D-27A95DD21E70}</ProjectGuid>
+    <RootNamespace>CodeLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\Source\Containers;.\Source\File IO;.\Source\Memory;.\Source\Registry;.\Source\Tests;.\Source\Timers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\Source\Containers;.\Source\File IO;.\Source\Memory;.\Source\Registry;.\Source\Tests;.\Source\Timers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeLib.cpp" />
+    <ClCompile Include="Source\File IO\DiskIO.cpp" />
+    <ClCompile Include="Source\File IO\FileIO.cpp" />
+    <ClCompile Include="Source\File IO\TxtFile.cpp" />
+    <ClCompile Include="Source\Memory\Buffer.cpp" />
+    <ClCompile Include="Source\Memory\TextBuffer.cpp" />
+    <ClCompile Include="Source\Registry\Registry.cpp" />
+    <ClCompile Include="Source\Tests\Array2DTest.cpp" />
+    <ClCompile Include="Source\Tests\ArrayTest.cpp" />
+    <ClCompile Include="Source\Tests\BufferTest.cpp" />
+    <ClCompile Include="Source\Tests\FileIOTest.cpp" />
+    <ClCompile Include="Source\Tests\GenericTest.cpp" />
+    <ClCompile Include="Source\Tests\LinkedListTest.cpp" />
+    <ClCompile Include="Source\Tests\TreeTest.cpp" />
+    <ClCompile Include="Source\Tests\TxtFileTest.cpp" />
+    <ClCompile Include="Source\Windows\FileSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CodeLib.h" />
+    <ClInclude Include="Source\Containers\Array.h" />
+    <ClInclude Include="Source\Containers\Array2D.h" />
+    <ClInclude Include="Source\Containers\Assertion.h" />
+    <ClInclude Include="Source\Containers\Exceptions.h" />
+    <ClInclude Include="Source\Containers\LinkedList.h" />
+    <ClInclude Include="Source\Containers\Tree.h" />
+    <ClInclude Include="Source\File IO\DiskIO.h" />
+    <ClInclude Include="Source\File IO\FileIO.h" />
+    <ClInclude Include="Source\File IO\TxtFile.h" />
+    <ClInclude Include="Source\Memory\Buffer.h" />
+    <ClInclude Include="Source\Memory\SafeKill.h" />
+    <ClInclude Include="Source\Memory\TextBuffer.h" />
+    <ClInclude Include="Source\Registry\Registry.h" />
+    <ClInclude Include="Source\Tests\Array2DTest.h" />
+    <ClInclude Include="Source\Tests\ArrayTest.h" />
+    <ClInclude Include="Source\Tests\BufferTest.h" />
+    <ClInclude Include="Source\Tests\FileIOTest.h" />
+    <ClInclude Include="Source\Tests\GenericTest.h" />
+    <ClInclude Include="Source\Tests\LinkedListTest.h" />
+    <ClInclude Include="Source\Tests\TreeTest.h" />
+    <ClInclude Include="Source\Tests\TxtFileTest.h" />
+    <ClInclude Include="Source\Windows\FileSystem.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
